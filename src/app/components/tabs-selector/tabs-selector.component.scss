@@ -1,0 +1,27 @@
+@import "../../../variables.scss";
+
+.tabs-container{
+  background: white;
+  border-radius: 50px;
+  height: 48px;
+  color: $gray1;
+  padding: 3px;
+  display: flex;
+  box-shadow: rgba(0,0,0,0.19) 0 2px 13px;
+  .tab{
+    flex: 1;
+    font-size: 13px;
+    line-height: 42px;
+    text-align: center;
+    &:hover{
+      cursor: pointer;
+    }
+    &.selected{
+      background: $primary-color;
+      color: white;
+      border-radius: 50px;
+
+
+    }
+  }
+}

@@ -1,0 +1,3 @@
+<div class="tabs-container">
+    <div class="tab" *ngFor="let tab of options" [class.selected]="tab == selected" (click)="selectTab(tab)">{{tab.text}}</div>
+</div>
