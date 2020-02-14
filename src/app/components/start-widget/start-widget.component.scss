@@ -1,0 +1,86 @@
+@import "../../../variables.scss";
+
+.start-widget{
+  background: white;
+  border-radius: 4px;
+  box-shadow: rgba(0,0,0,0.11) 0 4px 23px;
+  padding: 32px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 330px;
+  transition: all ease 0.5s;
+  &.simplified{
+    min-height: 230px;
+  }
+  .divider{
+    width: 100%;
+    height: 1px;
+    background: #E0E0E0;
+    margin: 24px 0;
+  }
+  .row{
+    display: flex;
+    .col{
+      flex:1;
+      &.icon{
+        min-width: 34px;
+        max-width: 34px;
+        img{
+          width: 34px;
+          margin-top: 11px;
+          height: 34px;
+        }
+      }
+      &.mr{
+        text-align: right;
+      }
+    }
+    .label{
+      font-size: 15px;
+      color: $gray2;
+    }
+    .date-value{
+      font-size: 17px;
+      font-weight: bold;
+      color: $gray3;
+      margin-top: 7px;
+    }
+    .day-value{
+      font-size: 12px;
+      margin-top: 5px;
+      color: $gray-placeholder;
+    }
+    .iata-value{
+      font-size: 21px;
+      font-weight: bold;
+      color: $gray3;
+      margin-top: 3px;
+    }
+  }
+  .flight-content{
+    transition: all ease 0.3s;
+    position: absolute;
+    top: 32px;
+    left: 24px;
+    width: calc(100% - 48px);
+    &.hide{
+      left: -100%;
+    }
+  }
+  .hotel-content{
+    transition: all ease 0.3s;
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    width: calc(100% - 48px);
+    &.hide{
+      right: -100%;
+    }
+  }
+}
+.button-holder{
+  margin-top: 47px;
+}
+.side-padded.hide{
+  display: none;
+}

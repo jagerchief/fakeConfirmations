@@ -1,7 +1,37 @@
-<div class="hero-section">
-    <div class="container">
+<div class="hero-section" [class.hide]="showFlightResults">
+    <div class="container side-padded" [class.hide]="showFlightResults">
 
-        <tabs-selector></tabs-selector>
+        <h1>Create dummy flights and hotel confirmation pages</h1>
+        <p>Proof of Onward Travel is required by many countries before you even board an ✈️ airplane. If you'd like to keep your travel options open & travel on one-way tickets, this hack is perfect for you!</p>
+
+
     </div>
 
 </div>
+<section class="start-widget" [class.smaller]="showFlightResults">
+    <div class="container">
+        <start-widget [simplified]="showFlightResults" (onSearchFlights)="searchFlights()"></start-widget>
+    </div>
+</section>
+<section class="hiw" [class.hidden]="showFlightResults">
+    <div class="container side-padded">
+        <div class="hiw-block">
+            <h3>What is this?</h3>
+            <p>This is an online tool to create fake confirmation tickets for flights and hotel. Since a lot of countries needs</p>
+        </div>
+        <div class="hiw-block">
+            <h3>What is this?</h3>
+            <p>This is an online tool to create fake confirmation tickets for flights and hotel. Since a lot of countries needs</p>
+        </div>
+        <div class="hiw-block">
+            <h3>What is this?</h3>
+            <p>This is an online tool to create fake confirmation tickets for flights and hotel. Since a lot of countries needs</p>
+        </div>
+        <div class="hiw-block">
+            <h3>What is this?</h3>
+            <p>This is an online tool to create fake confirmation tickets for flights and hotel. Since a lot of countries needs</p>
+        </div>
+    </div>
+</section>
+
+<flights *ngIf="showFlightResults"></flights>

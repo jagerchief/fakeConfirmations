@@ -1,0 +1,66 @@
+<div class="side-padded" [class.hide]="simplified">
+    <tabs-selector (onSelectChange)="changeSelected($event)"></tabs-selector>
+</div>
+
+<div class="start-widget" [class.simplified]="simplified">
+    <div class="flight-content" [class.hide]="selectedType != 'flights'">
+        <div class="row">
+            <div class="col">
+                <div class="label">From</div>
+                <div class="iata-value">BCN</div>
+            </div>
+            <div class="col icon"><img src="/assets/img/swtch.png"></div>
+            <div class="col mr">
+                <div class="label">To</div>
+                <div class="iata-value">LIS</div>
+            </div>
+        </div>
+        <div class="divider">
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="label">From</div>
+                <div class="date-value">10 DEC</div>
+                <div class="day-value">Monday 2020</div>
+            </div>
+            <div class="col mr">
+                <div class="label">To</div>
+                <div class="date-value">15 DEC</div>
+                <div class="day-value">Tuesday 2020</div>
+            </div>
+        </div>
+        <div class="button-holder">
+            <app-button (click)="searchFlights()"></app-button>
+        </div>
+    </div>
+    <div class="hotel-content" [class.hide]="selectedType != 'hotel'">
+        <div class="row">
+            <div class="col">
+                <div class="label">Destination</div>
+                <div class="iata-value">París</div>
+            </div>
+            <div class="col mr">
+
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col">
+                <div class="label">From</div>
+                <div class="date-value">10 DEC</div>
+                <div class="day-value">Monday 2020</div>
+            </div>
+            <div class="col mr">
+                <div class="label">To</div>
+                <div class="date-value">15 DEC</div>
+                <div class="day-value">Tuesday 2020</div>
+            </div>
+        </div>
+        <div class="button-holder" [class.hidden]="simplified">
+            <app-button (click)="searchFlights()"></app-button>
+        </div>
+    </div>
+
+
+</div>

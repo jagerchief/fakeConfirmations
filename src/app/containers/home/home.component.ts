@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+  public showFlightResults = false;
 
   ngOnInit() {
+  }
+
+  searchFlights() {
+    console.log('test');
+    this.showFlightResults = !this.showFlightResults;
   }
 
 }

@@ -1,0 +1,79 @@
+@import "../../../variables.scss";
+
+.flight-card {
+  background: white;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.11) 0 4px 23px;
+  margin-bottom: 16px;
+  opacity: 0;
+  transition: all ease 1s;
+  margin-top: 100px;
+  .row {
+    display: flex;
+    padding: 16px;
+    .column {
+      flex: 1;
+      &.wide {
+        flex: 2;
+        text-align: center;
+        padding-top: 0;
+      }
+      .flight-time{
+        color: $gray-placeholder;
+        font-size: 12px;
+      }
+      .non-stop{
+        color: $gray-placeholder;
+        font-size: 12px;
+        margin-top: 4px;
+        margin-bottom: 6px;
+      }
+      img{
+        margin-top: 10px;
+      }
+      &.airline-info{
+        display: flex;
+      }
+      .airline-image{
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background: red;
+        background-image: url('https://image.flaticon.com/icons/svg/806/806056.svg');
+        background-size: cover;
+        background-position: center;
+      }
+      .flight-num{
+        color: $gray-placeholder;
+        font-size: 12px;
+        margin-left: 8px;
+        height: 33px;
+        line-height: 33px;
+      }
+      .label{
+        font-size: 14px;
+        margin-top: 8px;
+        color: $gray2;
+        margin-bottom: 4px;
+        font-weight: bold;
+      }
+      .time{
+        font-size: 17px;
+        color: $gray3;
+        font-weight: bolder;
+      }
+      &:last-child{
+        text-align: right;
+      }
+    }
+    border-bottom: solid 1px #E0E0E0;
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+}
+
+.appear{
+  opacity: 1;
+  margin-top: 0;
+}

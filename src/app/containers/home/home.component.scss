@@ -1,11 +1,63 @@
 @import "../../../variables.scss";
 
-h1 {
-  color: $primary-color;
-}
+
 
 .hero-section{
   padding: 24px 0;
+  padding-bottom: 240px;
   background-color: $secondary-color;
-
+  height: auto;
+  transition: all ease 0.5s;
+  max-height: 1000px;
+  &.hide{
+    max-height: 0;
+    padding-bottom: 130px;
+  }
+  .container{
+    transition: all ease 0.5s;
+    position: relative;
+    top: 0;
+    &.hide{
+      top: -300px;
+    }
+  }
+  h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 29px;
+  }
+  p{
+    color: white;
+  }
 }
+section.start-widget{
+  .container{
+    margin-top: -240px;
+  }
+  &.smaller{
+    .container{
+      margin-top: -130px;
+    }
+
+  }
+}
+
+section.hiw{
+
+  .hiw-block{
+    margin-top: 42px;
+    h3{
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 24px;
+      margin: 0;
+    }
+    p{
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
